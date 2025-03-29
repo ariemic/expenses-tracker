@@ -12,7 +12,7 @@ const initialCategories = [
 
 
 function App() {
-  const [userName] = useState("Adrian");
+  const [userName] = useState("Wojtek");
   const [categories, setCategories] = useState(initialCategories);
   const [expenses, setExpenses] = useState([]);
   const [todayExpense, setTodayExpense] = useState({ amount: "", category: "" });

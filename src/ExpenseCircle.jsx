@@ -13,7 +13,18 @@ function ExpensesCircle({ data }) {
     },
     pieHole: 0.4,
     pieSliceText: "value",
-    colors: ['#EF4444', '#3B82F6', '#10B981', '#F59E0B'],
+    colors: [
+      '#EF4444', // red-500
+      '#3B82F6', // blue-500
+      '#10B981', // emerald-500
+      '#F59E0B', // amber-500
+      '#8B5CF6', // violet-500
+      '#EC4899', // pink-500
+      '#14B8A6', // teal-500
+      '#F97316', // orange-500
+      '#64748B', // slate-500
+      '#A855F7'  // purple-500
+    ],
     legend: {
       position: 'labeled',
       textStyle: {
