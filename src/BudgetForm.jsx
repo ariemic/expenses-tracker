@@ -52,20 +52,15 @@ function BudgetForm({ categories, onUpdate }) {
       return;
     }
 
-    // Add new category to the list
-    const newCategoryObj = {
-      category: newCategory.trim(),
-      budget: parseFloat(newCategoryBudget)
-    };
 
     onUpdate({
       ...Object.fromEntries(categories.map(c => [c.category, c.budget])),
-      [newCategory]: newCategoryBudget
+      [newCategory.trim()]: parseFloat(newCategoryBudget)
     });
 
     setNewCategory("");
     setNewCategoryBudget("");
-    // alert(`Dodano nową kategorię: ${newCategory}`);
+    alert(`Dodano nową kategorię: ${newCategory}`);
   };
 
 
@@ -112,8 +107,8 @@ function BudgetForm({ categories, onUpdate }) {
               type="number"
               value={newCategoryBudget}
               onChange={(e) => setNewCategoryBudget(e.target.value)}
-              min="0.01"
-              step="0.01"
+              min="1"
+              step="1"
               className='w-46 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-200'
               placeholder="Kwota"
             />

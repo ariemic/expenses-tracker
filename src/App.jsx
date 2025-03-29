@@ -36,7 +36,7 @@ function App() {
   }, [expenses]);
 
   const updateBudget = (newBudgets) => {
-    console.log("old", )
+
     setCategories(prev => {
 
       // Update existing categories
